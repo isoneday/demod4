@@ -812,3 +812,597 @@ td button {
     margin-top: 0.75rem;
   }
 }
+
+.redesign-shell {
+  min-height: 100vh;
+  background: #f4f6f7;
+  color: #162126;
+}
+
+.redesign-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid #d8e1de;
+  background: linear-gradient(180deg, #fbfcfc 0%, #f5f7f6 100%);
+}
+
+.redesign-header h1 {
+  margin: 0.15rem 0;
+  font-size: 1.7rem;
+}
+
+.redesign-intro {
+  max-width: 760px;
+  margin: 0;
+  color: #4b5a60;
+}
+
+.system-label--soft {
+  background: #dff1ea;
+  color: #165641;
+}
+
+.redesign-header-meta {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 250px;
+}
+
+.redesign-header-meta div {
+  padding: 0.7rem 0.85rem;
+  border: 1px solid #d9e2df;
+  background: #ffffff;
+}
+
+.redesign-header-meta span,
+.redesign-header-meta strong {
+  display: block;
+}
+
+.redesign-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 280px;
+  gap: 1rem;
+  align-items: start;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.redesign-sidebar,
+.redesign-aside {
+  display: grid;
+  gap: 1rem;
+}
+
+.sidebar-section,
+.home-section,
+.task-section {
+  padding: 1rem;
+  border: 1px solid #d8e1de;
+  background: #ffffff;
+}
+
+.sidebar-section h2,
+.task-section h2,
+.home-section h2,
+.task-card h3,
+.task-summary-block h3,
+.invoice-summary strong,
+.task-side-summary h3 {
+  margin-top: 0;
+}
+
+.primary-task-nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.nav-button,
+.support-rail-button,
+.primary-action,
+.secondary-action,
+.ghost-action,
+.back-button,
+.support-inline,
+.chip-button {
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #c7d4d0;
+  background: #f9fbfa;
+  color: #14232a;
+  text-align: left;
+}
+
+.nav-button {
+  display: grid;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.nav-button strong {
+  font-size: 0.95rem;
+}
+
+.nav-button span {
+  color: #5b686d;
+  font-size: 0.86rem;
+}
+
+.nav-button.is-active,
+.primary-action,
+.support-rail-button,
+.support-inline {
+  border-color: #0d6b4a;
+  background: #e8f6ef;
+}
+
+.sidebar-note,
+.form-help {
+  margin: 0.6rem 0 0;
+  color: #5b686d;
+  font-size: 0.9rem;
+}
+
+.secondary-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+
+.secondary-item {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid #d9e2df;
+  background: #fafcfb;
+  text-align: left;
+}
+
+.secondary-item strong,
+.secondary-item span {
+  display: block;
+}
+
+.secondary-item span {
+  color: #5b686d;
+  font-weight: 400;
+}
+
+.secondary-item.is-selected {
+  border-color: #0d6b4a;
+  background: #eefaf4;
+}
+
+.sidebar-section details summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.sidebar-section details[open] summary {
+  margin-bottom: 0.4rem;
+}
+
+.redesign-main {
+  min-width: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.redesign-notice {
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #d2dbd8;
+  background: #f7faf8;
+}
+
+.redesign-notice.is-success {
+  border-color: #a7d7bf;
+  background: #eefaf4;
+}
+
+.redesign-notice.is-warning {
+  border-color: #f0d18a;
+  background: #fff8e7;
+}
+
+.redesign-notice.is-info {
+  border-color: #c8d5f0;
+  background: #f0f5ff;
+}
+
+.home-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.home-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 1rem;
+  align-items: start;
+}
+
+.section-kicker {
+  margin: 0 0 0.25rem;
+  color: #5f726c;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.context-band {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.9rem;
+  border: 1px solid #d9e2df;
+  background: #f8faf9;
+}
+
+.context-band div,
+.task-summary-block,
+.task-card,
+.invoice-summary,
+.task-side-summary,
+.review-panel,
+.tariff-card,
+.contact-option {
+  border: 1px solid #d9e2df;
+  background: #ffffff;
+}
+
+.context-band div {
+  padding: 0.55rem 0.65rem;
+}
+
+.context-band span,
+.context-band strong {
+  display: block;
+}
+
+.primary-task-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.task-callout {
+  padding: 0.9rem;
+  border: 1px solid #d9e2df;
+  background: #fbfcfb;
+}
+
+.task-callout p {
+  color: #4b5a60;
+}
+
+.primary-action,
+.secondary-action,
+.ghost-action,
+.support-inline,
+.chip-button,
+.back-button {
+  border-radius: 0;
+}
+
+.primary-action {
+  text-align: center;
+  font-weight: 700;
+}
+
+.secondary-action,
+.ghost-action,
+.back-button {
+  background: #ffffff;
+}
+
+.task-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.task-summary-block {
+  padding: 0.9rem;
+}
+
+.home-lower {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.inline-summary {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.inline-summary span,
+.inline-summary small {
+  display: block;
+}
+
+.task-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.task-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.invoice-feature,
+.two-column-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+  gap: 0.8rem;
+}
+
+.invoice-summary,
+.task-side-summary,
+.task-card,
+.review-panel,
+.tariff-card {
+  padding: 0.9rem;
+}
+
+.invoice-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.invoice-summary div,
+.compact-facts div,
+.review-facts div,
+.snapshot-list div {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #e2e8e5;
+  background: #fbfcfb;
+}
+
+.invoice-summary span,
+.invoice-summary strong {
+  display: block;
+}
+
+.invoice-list,
+.bullet-list,
+.annotation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.invoice-list li,
+.annotation-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid #e2e8e5;
+}
+
+.invoice-list li:first-child,
+.annotation-list li:first-child {
+  border-top: 0;
+}
+
+.compact-facts,
+.review-facts,
+.snapshot-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.compact-facts dt,
+.review-facts dt,
+.snapshot-list dt {
+  font-size: 0.8rem;
+  color: #5b686d;
+}
+
+.compact-facts dd,
+.review-facts dd,
+.snapshot-list dd {
+  margin: 0.1rem 0 0;
+  font-weight: 700;
+}
+
+.progress-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.step-chip {
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #d0dad6;
+  background: #f5f8f7;
+  font-size: 0.88rem;
+}
+
+.step-chip.is-active {
+  border-color: #0d6b4a;
+  background: #eaf7ef;
+  font-weight: 700;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.field-grid label,
+.message-field {
+  display: grid;
+  gap: 0.3rem;
+  font-weight: 700;
+}
+
+.field-grid input,
+.field-grid select,
+.message-field textarea {
+  min-height: 44px;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #c7d4d0;
+  background: #fff;
+}
+
+.message-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.error-message {
+  margin: 0;
+  color: #b42318;
+  font-weight: 700;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip-button {
+  min-width: 130px;
+  text-align: center;
+}
+
+.chip-button.is-selected,
+.contact-option.is-selected,
+.tariff-card.is-selected {
+  border-color: #0d6b4a;
+  background: #eefaf4;
+}
+
+.tariff-compare,
+.contact-options {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tariff-card-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.radio-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+}
+
+.bullet-list li {
+  padding: 0.4rem 0;
+  border-top: 1px solid #edf1ef;
+}
+
+.bullet-list li strong,
+.bullet-list li span {
+  display: block;
+}
+
+.contact-option {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.contact-option strong,
+.contact-option small {
+  display: block;
+}
+
+.contact-option small {
+  color: #5b686d;
+  font-weight: 400;
+}
+
+.support-inline {
+  min-width: 180px;
+  text-align: center;
+}
+
+.redesign-aside {
+  position: sticky;
+  top: 0.75rem;
+}
+
+@media (max-width: 1120px) {
+  .redesign-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .redesign-aside {
+    position: static;
+    grid-column: 1 / -1;
+  }
+
+  .primary-task-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .redesign-header,
+  .home-summary,
+  .invoice-feature,
+  .two-column-panel,
+  .field-grid,
+  .home-lower,
+  .redesign-layout {
+    display: block;
+  }
+
+  .redesign-layout {
+    padding: 0.75rem;
+  }
+
+  .redesign-sidebar,
+  .redesign-main,
+  .redesign-aside {
+    margin-bottom: 0.75rem;
+  }
+
+  .primary-task-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-header {
+    display: block;
+  }
+
+  .invoice-summary,
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inline-summary,
+  .tariff-card-head {
+    display: block;
+  }
+}

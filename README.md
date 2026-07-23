@@ -3,6 +3,7 @@
 Stage 1 implements the deliberately problematic legacy version of the fictional MyEnergy customer self-service portal.
 Stage 2 adds a professional UX and cognitive-friction audit of that legacy version.
 Stage 3 converts the audit into a constrained 12-week product strategy and prioritization decision.
+Stage 4 implements the redesigned task-oriented portal.
 
 ## Run
 
@@ -14,6 +15,7 @@ npm run dev
 Open:
 
 - `/legacy` for the deliberately problematic portal
+- `/redesigned` for the redesigned customer portal
 - `/audit` for the structured trainer-facing audit
 - `/strategy` for the 12-week product decision view
 
@@ -49,3 +51,13 @@ Created strategy deliverables:
 - `/strategy` application view
 
 The redesigned portal is intentionally not implemented yet.
+
+## Stage 4 Scope
+
+Created redesign deliverables:
+
+- `src/data/redesign.ts`
+- `src/views/RedesignedPortal.tsx`
+- `/redesigned` application view
+
+The legacy portal remains available for comparison.
