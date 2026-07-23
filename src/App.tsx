@@ -30,7 +30,7 @@ export function App() {
   return (
     <main className="route-message">
       <h1>MyEnergy UX Laws Demo</h1>
-      <p>This stage implements the legacy portal, redesigned portal, UX audit, comparison, and 12-week strategy view.</p>
+      <p>This package includes the legacy portal, audit, strategy, redesign, comparison, validation, and stakeholder-review materials.</p>
       <a href="/redesigned">Open redesigned portal</a>
       <a href="/legacy">Open legacy portal</a>
       <a href="/compare">Open comparison</a>

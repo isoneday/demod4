@@ -1,85 +1,101 @@
 # MyEnergy UX Laws Demo
 
-Stage 1 implements the deliberately problematic legacy version of the fictional MyEnergy customer self-service portal.
-Stage 2 adds a professional UX and cognitive-friction audit of that legacy version.
-Stage 3 converts the audit into a constrained 12-week product strategy and prioritization decision.
-Stage 4 implements the redesigned task-oriented portal.
-Stage 5 adds a before-and-after comparison and guided classroom demonstration.
-Stage 6 adds the usability-validation package and final quality gate.
+MyEnergy is a training project that shows how UX decisions affect task completion, support demand, and confidence in a customer portal.
 
-## Run
+## Project Purpose
+
+The repository demonstrates a full UX process:
+
+1. Legacy portal
+2. UX audit
+3. Prioritization and strategy
+4. Redesigned portal
+5. Before-and-after comparison
+6. Usability-validation package
+7. Stakeholder review
+8. Final executive and classroom materials
+
+## Learning Objectives
+
+- Diagnose cognitive friction with UX laws and interface evidence.
+- Turn audit findings into a constrained product strategy.
+- Compare a legacy and redesigned task flow using proxy measures.
+- Distinguish interface evidence, hypotheses, and research evidence.
+- Review accessibility, validation, and governance concerns.
+
+## Technology
+
+- React 18
+- TypeScript
+- Vite
+- Vitest
+- Testing Library
+- Playwright for manual browser checks
+
+## Installation
 
 ```bash
 npm install
-npm run dev
 ```
 
-Open:
+## Run Commands
 
-- `/legacy` for the deliberately problematic portal
-- `/redesigned` for the redesigned customer portal
-- `/compare` for the before-and-after classroom comparison
-- `/audit` for the structured trainer-facing audit
-- `/strategy` for the 12-week product decision view
+```bash
+npm run dev
+npm run build
+npm run preview
+```
 
-## Stage 1 Scope
+## Test Commands
 
-Implemented task flows:
+```bash
+npm test
+```
 
-- Download latest invoice
-- Submit a meter reading
-- Adjust a monthly payment
-- Compare or change tariff
-- Request customer support
+`npm run build` also performs type checking through `tsc`.
 
-The current legacy version intentionally includes realistic UX problems for training analysis.
+## Application Routes
 
-## Stage 2 Scope
+- `/legacy` - deliberately problematic legacy portal
+- `/audit` - structured UX audit
+- `/strategy` - 12-week prioritization decision
+- `/redesigned` - task-focused redesigned portal
+- `/compare` - before-and-after comparison and guided demo
 
-Created audit deliverables:
+The default route shows a simple entry page with links to the main views.
 
-- `docs/ux-audit.md`
-- `src/data/uxAudit.ts`
-- `/audit` application view
+## Recommended Demo Order
 
-At this point the project did not yet include the redesigned portal, comparison view, or complete supporting documentation set from later stages.
+1. `/legacy`
+2. `/audit`
+3. `/strategy`
+4. `/redesigned`
+5. `/compare`
+6. `docs/usability-test-plan.md`
+7. `docs/stakeholder-review.md`
+8. `docs/executive-brief.md`
+9. `docs/demo-script.md`
 
-## Stage 3 Scope
+## Project Structure
 
-Created strategy deliverables:
+- `src/views/LegacyPortal.tsx` - legacy interface
+- `src/views/AuditView.tsx` - trainer-facing audit view
+- `src/views/StrategyView.tsx` - prioritization and roadmap view
+- `src/views/RedesignedPortal.tsx` - redesigned portal
+- `src/views/CompareView.tsx` - comparison and demo view
+- `src/data/` - audit, strategy, redesign, and comparison data
+- `docs/` - audit, validation, stakeholder, executive, and demo documents
+- `src/__tests__/` - focused route and interaction tests
 
-- `docs/prioritization.md`
-- `docs/decision-record.md`
-- `src/data/strategy.ts`
-- `/strategy` application view
+## Important Limitations
 
-The redesigned portal is intentionally not implemented yet.
+- The legacy portal is intentionally problematic for training purposes.
+- Proxy metrics and comparison counts are interface-based estimates, not user-performance results.
+- No real usability study findings are claimed here.
+- No real business outcome improvements are claimed here.
+- Some comparisons and governance decisions still rely on assumptions that require validation.
 
-## Stage 4 Scope
+## Metrics Disclaimer
 
-Created redesign deliverables:
+Unless a metric is explicitly backed by user research or production data, treat it as a hypothesis, proxy count, or planning estimate.
 
-- `src/data/redesign.ts`
-- `src/views/RedesignedPortal.tsx`
-- `/redesigned` application view
-
-The legacy portal remains available for comparison.
-
-## Stage 5 Scope
-
-Created comparison deliverables:
-
-- `src/data/comparison.ts`
-- `src/views/CompareView.tsx`
-- `/compare` application view
-
-The comparison uses proxy measures and hypotheses. It does not claim measured business results.
-
-## Stage 6 Scope
-
-Created validation deliverables:
-
-- `docs/usability-test-plan.md`
-- `docs/quality-gate.md`
-
-The package documents planned usability validation and the final product-quality review.
