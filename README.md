@@ -4,6 +4,7 @@ Stage 1 implements the deliberately problematic legacy version of the fictional 
 Stage 2 adds a professional UX and cognitive-friction audit of that legacy version.
 Stage 3 converts the audit into a constrained 12-week product strategy and prioritization decision.
 Stage 4 implements the redesigned task-oriented portal.
+Stage 5 adds a before-and-after comparison and guided classroom demonstration.
 
 ## Run
 
@@ -16,6 +17,7 @@ Open:
 
 - `/legacy` for the deliberately problematic portal
 - `/redesigned` for the redesigned customer portal
+- `/compare` for the before-and-after classroom comparison
 - `/audit` for the structured trainer-facing audit
 - `/strategy` for the 12-week product decision view
 
@@ -61,3 +63,13 @@ Created redesign deliverables:
 - `/redesigned` application view
 
 The legacy portal remains available for comparison.
+
+## Stage 5 Scope
+
+Created comparison deliverables:
+
+- `src/data/comparison.ts`
+- `src/views/CompareView.tsx`
+- `/compare` application view
+
+The comparison uses proxy measures and hypotheses. It does not claim measured business results.
