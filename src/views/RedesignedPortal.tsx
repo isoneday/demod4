@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
 import {
   meterContext,
   paymentContext,
@@ -36,6 +36,7 @@ export function RedesignedPortal() {
   const [section, setSection] = useState<RedesignTask>('home');
   const [notice, setNotice] = useState<Notice>(null);
   const [secondaryFocus, setSecondaryFocus] = useState(secondaryTasks[0].label);
+  const noticeRef = useRef<HTMLDivElement | null>(null);
 
   const [meterReading, setMeterReading] = useState('');
   const [meterDate, setMeterDate] = useState(meterContext.currentReadingDate);
@@ -66,6 +67,12 @@ export function RedesignedPortal() {
     () => supportOptions.find((option) => option.id === supportType) ?? supportOptions[0],
     [supportType],
   );
+
+  useEffect(() => {
+    if (notice) {
+      noticeRef.current?.focus();
+    }
+  }, [notice]);
 
   function openTask(nextSection: RedesignTask, clearNotice = true) {
     setSection(nextSection);
@@ -301,7 +308,13 @@ export function RedesignedPortal() {
 
         <main className="redesign-main">
           {notice && (
-            <div className={`redesign-notice is-${notice.tone}`} role="status" aria-live="polite">
+            <div
+              ref={noticeRef}
+              className={`redesign-notice is-${notice.tone}`}
+              role="status"
+              aria-live="polite"
+              tabIndex={-1}
+            >
               {notice.text}
             </div>
           )}

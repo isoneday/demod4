@@ -5,6 +5,7 @@ Stage 2 adds a professional UX and cognitive-friction audit of that legacy versi
 Stage 3 converts the audit into a constrained 12-week product strategy and prioritization decision.
 Stage 4 implements the redesigned task-oriented portal.
 Stage 5 adds a before-and-after comparison and guided classroom demonstration.
+Stage 6 adds the usability-validation package and final quality gate.
 
 ## Run
 
@@ -73,3 +74,12 @@ Created comparison deliverables:
 - `/compare` application view
 
 The comparison uses proxy measures and hypotheses. It does not claim measured business results.
+
+## Stage 6 Scope
+
+Created validation deliverables:
+
+- `docs/usability-test-plan.md`
+- `docs/quality-gate.md`
+
+The package documents planned usability validation and the final product-quality review.

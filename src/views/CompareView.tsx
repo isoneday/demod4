@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   designDecisionExplanations,
   managementHypotheses,
@@ -26,6 +26,7 @@ export function CompareView() {
   const [selectedTaskId, setSelectedTaskId] = useState<CompareTaskId>('invoice');
   const [demoStage, setDemoStage] = useState<DemoStage>('legacy');
   const [interactionCount, setInteractionCount] = useState(0);
+  const demoPanelRef = useRef<HTMLElement | null>(null);
 
   const selectedTask = useMemo(
     () => taskComparisons.find((task) => task.id === selectedTaskId) ?? taskComparisons[0],
@@ -35,6 +36,10 @@ export function CompareView() {
   const matchingDecisions = designDecisionExplanations.filter(
     (decision) => decision.task === selectedTask.id || decision.task === 'home',
   );
+
+  useEffect(() => {
+    demoPanelRef.current?.focus();
+  }, [demoStage, selectedTaskId]);
 
   function countInteraction(action: () => void) {
     setInteractionCount((count) => count + 1);
@@ -146,19 +151,19 @@ export function CompareView() {
           </div>
 
           <div className="demo-stage-controls" role="group" aria-label="Demo stage">
-            <button type="button" className={demoStage === 'legacy' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('legacy'))}>
+            <button type="button" aria-pressed={demoStage === 'legacy'} className={demoStage === 'legacy' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('legacy'))}>
               1. Legacy task
             </button>
-            <button type="button" className={demoStage === 'redesigned' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('redesigned'))}>
+            <button type="button" aria-pressed={demoStage === 'redesigned'} className={demoStage === 'redesigned' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('redesigned'))}>
               2. Redesigned task
             </button>
-            <button type="button" className={demoStage === 'explain' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('explain'))}>
+            <button type="button" aria-pressed={demoStage === 'explain'} className={demoStage === 'explain' ? 'is-active' : ''} onClick={() => countInteraction(() => setDemoStage('explain'))}>
               3. Explain decision
             </button>
           </div>
 
           {demoStage === 'legacy' && (
-            <article className="demo-panel">
+            <article className="demo-panel" ref={demoPanelRef} tabIndex={-1}>
               <h3>Start with the legacy portal</h3>
               <p>{selectedTask.instruction}</p>
               <ol>
@@ -169,7 +174,7 @@ export function CompareView() {
           )}
 
           {demoStage === 'redesigned' && (
-            <article className="demo-panel">
+            <article className="demo-panel" ref={demoPanelRef} tabIndex={-1}>
               <h3>Switch to the redesigned portal</h3>
               <p>Ask participants to repeat the same task and observe changes in entry point, memory requirements, and feedback.</p>
               <ol>
@@ -180,7 +185,7 @@ export function CompareView() {
           )}
 
           {demoStage === 'explain' && (
-            <article className="demo-panel">
+            <article className="demo-panel" ref={demoPanelRef} tabIndex={-1}>
               <h3>Review UX-law explanation</h3>
               {matchingDecisions.map((decision) => (
                 <section key={decision.id} className="decision-explanation">
